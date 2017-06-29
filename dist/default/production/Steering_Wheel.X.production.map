@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=/Applications/microchip/xc8/v1.41/dat/en_msgs.txt -cs \
   -h+dist/default/production/Steering_Wheel.X.production.sym \
   --cmf=dist/default/production/Steering_Wheel.X.production.cmf -z -Q16F88 \
-  -o/tmp/xcvJ3YAdN \
+  -o/tmp/xcEZWEx31 \
   -Mdist/default/production/Steering_Wheel.X.production.map -E1 -ver=XC8 \
   -ASTACK=0110h-016fh -pstack=STACK -ACODE=00h-07FFhx2 -ASTRCODE=00h-0FFFh \
   -ASTRING=00h-0FFhx16 -ACONST=00h-0FFhx16 -AENTRY=00h-0FFhx16 \
@@ -18,7 +18,7 @@ Linker command line:
   -pfunctab=CODE -ACONFIG=02007h-02008h -pconfig=CONFIG -DCONFIG=2 \
   -AIDLOC=02000h-02003h -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h \
   -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 \
-  -DENTRY=2 -k /tmp/xcJRhbazE.obj \
+  -DENTRY=2 -k /tmp/xcJVQ0UFU.obj \
   dist/default/production/Steering_Wheel.X.production.obj 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F88
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcJRhbazE.obj
+/tmp/xcJVQ0UFU.obj
                 end_init                             11       11        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             2007     2007        2     400E       0
@@ -38,14 +38,14 @@ dist/default/production/Steering_Wheel.X.production.obj
                 text7                               367      367       6C        8       0
                 text6                                1C       1C      106        8       0
                 text5                               3D3      3D3       5D        8       0
-                text4                               430      430       44        8       0
+                text4                               430      430       46        8       0
                 text3                               2F9      2F9       6E        8       0
                 text2                               122      122       B7        8       0
                 text1                               26B      26B       8E        8       0
                 maintext                            1D9      1D9       92        8       0
                 cstackBANK0                          20       20       24       20       1
                 cstackCOMMON                         70       70        E       70       1
-                clrtext                             474      474        8        8       0
+                clrtext                             476      476        8        8       0
                 bssBANK0                             44       44        F       20       1
                 nvBANK0                              53       53        3       20       1
 
@@ -60,12 +60,12 @@ TOTAL           Name                               Link     Load   Length     Sp
                 text7                               367      367       6C         0
                 text6                                1C       1C      106         0
                 text5                               3D3      3D3       5D         0
-                text4                               430      430       44         0
+                text4                               430      430       46         0
                 text3                               2F9      2F9       6E         0
                 text2                               122      122       B7         0
                 text1                               26B      26B       8E         0
                 maintext                            1D9      1D9       92         0
-                clrtext                             474      474        8         0
+                clrtext                             476      476        8         0
 
         CLASS   STRCODE        
 
@@ -114,7 +114,7 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000002  000002         0       0  CODE        2
-                intentry                       000004  000478  00047C         8       0  CODE        2
+                intentry                       000004  00047A  00047E         8       0  CODE        2
                 cstackBANK0                    000020  000036  000056        20       1  BANK0       1
                 cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
                 config                         002007  000002  002009      400E       0  CONFIG      2
@@ -128,12 +128,12 @@ UNUSED ADDRESS RANGES
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0002-0003              2           2
-                         047C-0FFF            384
+                         047E-0FFF            382
         CONST            0002-0003              2           2
-                         047C-0FFF            100
+                         047E-0FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0002-0003              2           2
-                         047C-0FFF            100
+                         047E-0FFF            100
         IDLOC            2000-2003              4           2
         RAM              0056-006F             1A           1
                          00A0-00EF             50
@@ -145,9 +145,9 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0002-0003              2           2
-                         047C-0FFF            B84
+                         047E-0FFF            B82
         STRING           0002-0003              2           2
-                         047C-0FFF            100
+                         047E-0FFF            100
 
                                   Symbol Table
 
@@ -290,7 +290,7 @@ ___fttol@sign1           cstackBANK0  0033
 ___int_sp                stack        0000
 ___latbits               (abs)        0001
 ___sp                    stack        0000
-__end_of_InterTimer      text4        0474
+__end_of_InterTimer      text4        0476
 __end_of___ftadd         text6        0122
 __end_of___ftdiv         text2        01D9
 __end_of___ftge          text5        0430
@@ -327,7 +327,7 @@ _main                    maintext     01D9
 _ref                     nvBANK0      0053
 _send_data               bssBANK0     0051
 btemp                    (abs)        007E
-clear_ram0               clrtext      0474
+clear_ram0               clrtext      0476
 end_of_initialization    cinit        0019
 i1___ftpack              text7        0367
 i1___ftpack@arg          cstackCOMMON 0070
@@ -636,9 +636,9 @@ shared estimated size: 116
 
 main.c
 		_main          		CODE           	01D9	0000	147
-		_InterTimer    		CODE           	0430	0000	69
+		_InterTimer    		CODE           	0430	0000	71
 
-main.c estimated size: 216
+main.c estimated size: 218
 
 /Applications/microchip/xc8/v1.41/sources/common/ftadd.c
 		___ftadd       		CODE           	001C	0000	263

@@ -1243,26 +1243,29 @@ Version 3.2 HI-TECH Software Intermediate Code
 "93
 [e $ ! == _flag -> 1 `i 107  ]
 {
-[; ;main.c: 94: Count = Count + 16.0;
+[; ;main.c: 94: Count = Count + 1.0;
 "94
-[e = _Count + _Count .16.0 ]
-[; ;main.c: 95: if(Count>2000) Count = 2000;
+[e = _Count + _Count .1.0 ]
+[; ;main.c: 95: PORTB = 0b00000001;
 "95
+[e = _PORTB -> -> 1 `i `uc ]
+[; ;main.c: 96: if(Count>2000) Count = 2000;
+"96
 [e $ ! > _Count -> -> 2000 `i `d 108  ]
 [e = _Count -> -> 2000 `i `d ]
 [e :U 108 ]
-"96
-}
-[e :U 107 ]
 "97
 }
-[e :U 106 ]
-[; ;main.c: 96: }
-[; ;main.c: 97: }
-[; ;main.c: 98: TMR2IF = 0;
+[e :U 107 ]
 "98
-[e = _TMR2IF -> -> 0 `i `b ]
-[; ;main.c: 99: }
+}
+[e :U 106 ]
+[; ;main.c: 97: }
+[; ;main.c: 98: }
+[; ;main.c: 99: TMR2IF = 0;
 "99
+[e = _TMR2IF -> -> 0 `i `b ]
+[; ;main.c: 100: }
+"100
 [e :UE 105 ]
 }

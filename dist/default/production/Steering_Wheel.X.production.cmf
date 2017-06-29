@@ -11,16 +11,12 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$/tmp/xcJRhbazE.obj
-reset_vec CODE 0 0 0 2 2
-end_init CODE 0 11 11 2 2
-config CONFIG 0 2007 2007 2 2
 $dist/default/production/Steering_Wheel.X.production.obj
 cinit CODE 0 13 13 9 2
 text1 CODE 0 26B 26B 8E 2
 text2 CODE 0 122 122 B7 2
 text3 CODE 0 2F9 2F9 6E 2
-text4 CODE 0 430 430 44 2
+text4 CODE 0 430 430 46 2
 text5 CODE 0 3D3 3D3 5D 2
 text6 CODE 0 1C 1C 106 2
 text7 CODE 0 367 367 6C 2
@@ -30,7 +26,11 @@ cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK0 BANK0 1 20 20 24 1
 intentry CODE 0 4 4 D 2
 bssBANK0 BANK0 1 44 44 F 1
-clrtext CODE 0 474 474 8 2
+clrtext CODE 0 476 476 8 2
+$/tmp/xcJVQ0UFU.obj
+reset_vec CODE 0 0 0 2 2
+end_init CODE 0 11 11 2 2
+config CONFIG 0 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
@@ -46,22 +46,22 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 2-3 2
-CONST 47C-FFF 2
+CONST 47E-FFF 2
 ENTRY 2-3 2
-ENTRY 47C-FFF 2
+ENTRY 47E-FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 2-3 2
-CODE 47C-FFF 2
+CODE 47E-FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
 EEDATA 2100-21FF 2
 STRCODE 2-3 2
-STRCODE 47C-FFF 2
+STRCODE 47E-FFF 2
 STRING 2-3 2
-STRING 47C-FFF 2
+STRING 47E-FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -76,16 +76,16 @@ STRING 47C-FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production/Steering_Wheel.X.production.obj
-13 cinit CODE >217:/tmp/xcJJ2dlk2
-13 cinit CODE >220:/tmp/xcJJ2dlk2
-13 cinit CODE >261:/tmp/xcJJ2dlk2
-14 cinit CODE >262:/tmp/xcJJ2dlk2
-15 cinit CODE >263:/tmp/xcJJ2dlk2
-16 cinit CODE >264:/tmp/xcJJ2dlk2
-17 cinit CODE >265:/tmp/xcJJ2dlk2
-19 cinit CODE >271:/tmp/xcJJ2dlk2
-19 cinit CODE >273:/tmp/xcJJ2dlk2
-1A cinit CODE >274:/tmp/xcJJ2dlk2
+13 cinit CODE >217:/tmp/xcZ0CdHkW
+13 cinit CODE >220:/tmp/xcZ0CdHkW
+13 cinit CODE >261:/tmp/xcZ0CdHkW
+14 cinit CODE >262:/tmp/xcZ0CdHkW
+15 cinit CODE >263:/tmp/xcZ0CdHkW
+16 cinit CODE >264:/tmp/xcZ0CdHkW
+17 cinit CODE >265:/tmp/xcZ0CdHkW
+19 cinit CODE >271:/tmp/xcZ0CdHkW
+19 cinit CODE >273:/tmp/xcZ0CdHkW
+1A cinit CODE >274:/tmp/xcZ0CdHkW
 4 intentry CODE >91:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 367 text7 CODE >62:/Applications/microchip/xc8/v1.41/sources/common/float.c
 367 text7 CODE >64:/Applications/microchip/xc8/v1.41/sources/common/float.c
@@ -163,8 +163,9 @@ FF text6 CODE >143:/Applications/microchip/xc8/v1.41/sources/common/ftadd.c
 432 text4 CODE >93:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 436 text4 CODE >94:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 44D text4 CODE >95:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
-466 text4 CODE >98:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
-469 text4 CODE >99:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
+44F text4 CODE >96:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
+468 text4 CODE >99:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
+46B text4 CODE >100:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 2F9 text3 CODE >62:/Applications/microchip/xc8/v1.41/sources/common/float.c
 2F9 text3 CODE >64:/Applications/microchip/xc8/v1.41/sources/common/float.c
 303 text3 CODE >65:/Applications/microchip/xc8/v1.41/sources/common/float.c
@@ -270,16 +271,16 @@ FF text6 CODE >143:/Applications/microchip/xc8/v1.41/sources/common/ftadd.c
 266 maintext CODE >85:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 268 maintext CODE >86:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 26A maintext CODE >64:/Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
-474 clrtext CODE >248:/tmp/xcJJ2dlk2
-474 clrtext CODE >249:/tmp/xcJJ2dlk2
-475 clrtext CODE >250:/tmp/xcJJ2dlk2
-475 clrtext CODE >251:/tmp/xcJJ2dlk2
-476 clrtext CODE >252:/tmp/xcJJ2dlk2
-477 clrtext CODE >253:/tmp/xcJJ2dlk2
-478 clrtext CODE >254:/tmp/xcJJ2dlk2
-479 clrtext CODE >255:/tmp/xcJJ2dlk2
-47A clrtext CODE >256:/tmp/xcJJ2dlk2
-47B clrtext CODE >257:/tmp/xcJJ2dlk2
+476 clrtext CODE >248:/tmp/xcZ0CdHkW
+476 clrtext CODE >249:/tmp/xcZ0CdHkW
+477 clrtext CODE >250:/tmp/xcZ0CdHkW
+477 clrtext CODE >251:/tmp/xcZ0CdHkW
+478 clrtext CODE >252:/tmp/xcZ0CdHkW
+479 clrtext CODE >253:/tmp/xcZ0CdHkW
+47A clrtext CODE >254:/tmp/xcZ0CdHkW
+47B clrtext CODE >255:/tmp/xcZ0CdHkW
+47C clrtext CODE >256:/tmp/xcZ0CdHkW
+47D clrtext CODE >257:/tmp/xcZ0CdHkW
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -304,14 +305,14 @@ __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 _TMR2 11 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
-___sp 0 0 STACK 2 stack /tmp/xcJRhbazE.obj
+___sp 0 0 STACK 2 stack /tmp/xcJVQ0UFU.obj
 _byte 4A 0 BANK0 1 bssBANK0 dist/default/production/Steering_Wheel.X.production.obj
 _flag 4F 0 BANK0 1 bssBANK0 dist/default/production/Steering_Wheel.X.production.obj
 _main 3B2 0 CODE 0 maintext dist/default/production/Steering_Wheel.X.production.obj
 btemp 7E 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 ___ftadd@f1 78 0 COMMON 1 cstackCOMMON dist/default/production/Steering_Wheel.X.production.obj
 ___ftadd@f2 7B 0 COMMON 1 cstackCOMMON dist/default/production/Steering_Wheel.X.production.obj
-start 22 0 CODE 0 init /tmp/xcJRhbazE.obj
+start 22 0 CODE 0 init /tmp/xcJVQ0UFU.obj
 __size_of___ftadd 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __size_of___ftdiv 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __size_of___fttol 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
@@ -323,17 +324,17 @@ _InterTimer 860 0 CODE 0 text4 dist/default/production/Steering_Wheel.X.producti
 __Hpowerup 0 0 CODE 0 powerup -
 ___ftge@ff1 70 0 COMMON 1 cstackCOMMON dist/default/production/Steering_Wheel.X.production.obj
 ___ftge@ff2 73 0 COMMON 1 cstackCOMMON dist/default/production/Steering_Wheel.X.production.obj
-intlevel0 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
-intlevel1 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
-intlevel2 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
-intlevel3 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
-intlevel4 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
-intlevel5 0 0 CODE 0 functab /tmp/xcJRhbazE.obj
+intlevel0 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
+intlevel1 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
+intlevel2 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
+intlevel3 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
+intlevel4 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
+intlevel5 0 0 CODE 0 functab /tmp/xcJVQ0UFU.obj
 wtemp0 7E 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __end_of___ftge 860 0 CODE 0 text5 dist/default/production/Steering_Wheel.X.production.obj
-__end_of_InterTimer 8E8 0 CODE 0 text4 dist/default/production/Steering_Wheel.X.production.obj
+__end_of_InterTimer 8EC 0 CODE 0 text4 dist/default/production/Steering_Wheel.X.production.obj
 ___fttol@f1 2B 0 BANK0 1 cstackBANK0 dist/default/production/Steering_Wheel.X.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __LnvBANK0 0 0 ABS 0 nvBANK0 -
@@ -347,7 +348,7 @@ __size_ofi1___ftpack 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.produc
 __CFG_FCMEN$OFF 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 start_initialization 26 0 CODE 0 cinit dist/default/production/Steering_Wheel.X.production.obj
 _OSCCON 8F 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
-clear_ram0 8E8 0 CODE 0 clrtext dist/default/production/Steering_Wheel.X.production.obj
+clear_ram0 8EC 0 CODE 0 clrtext dist/default/production/Steering_Wheel.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production/Steering_Wheel.X.production.obj
 _SSPBUF 13 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 _SSPCON 14 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
@@ -358,7 +359,7 @@ _TMR2IF 61 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 ___ftpack 5F2 0 CODE 0 text3 dist/default/production/Steering_Wheel.X.production.obj
 ___ftpack@arg 2B 0 BANK0 1 cstackBANK0 dist/default/production/Steering_Wheel.X.production.obj
 ___ftpack@exp 2E 0 BANK0 1 cstackBANK0 dist/default/production/Steering_Wheel.X.production.obj
-___int_sp 0 0 STACK 2 stack /tmp/xcJRhbazE.obj
+___int_sp 0 0 STACK 2 stack /tmp/xcJVQ0UFU.obj
 __end_of___ftpack 6CE 0 CODE 0 text3 dist/default/production/Steering_Wheel.X.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
@@ -413,7 +414,7 @@ __size_of_InterTimer 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.produc
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __HnvBANK0 0 0 ABS 0 nvBANK0 -
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec /tmp/xcJRhbazE.obj
+reset_vec 0 0 CODE 0 reset_vec /tmp/xcJVQ0UFU.obj
 __size_of___ftge 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 ___ftadd 38 0 CODE 0 text6 dist/default/production/Steering_Wheel.X.production.obj
@@ -425,8 +426,8 @@ __Lconfig 400E 0 CONFIG 0 config -
 ?___ftpack 2B 0 BANK0 1 cstackBANK0 dist/default/production/Steering_Wheel.X.production.obj
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
-stackhi 0 0 ABS 0 - /tmp/xcJRhbazE.obj
-stacklo 0 0 ABS 0 - /tmp/xcJRhbazE.obj
+stackhi 0 0 ABS 0 - /tmp/xcJVQ0UFU.obj
+stacklo 0 0 ABS 0 - /tmp/xcJVQ0UFU.obj
 __CFG_LVP$OFF 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
@@ -515,6 +516,6 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production/Steering_Wheel.X.production.ob
 %SEGMENTS
 cstackCOMMON 1 70 70 E 1
 cstackBANK0 1 20 20 36 1
-intentry 0 4 8 478 2
+intentry 0 4 8 47A 2
 reset_vec 0 0 0 2 2
 config 0 2007 400E 2 2

@@ -91,7 +91,8 @@ void main(void){
 void interrupt InterTimer(void){
     if(TMR2IF == 1){                 //Timer2 interrupt
         if(flag == 1){
-            Count = Count + 16.0;
+            Count = Count + 1.0;
+            PORTB = 0b00000001;
             if(Count>2000) Count = 2000;
         }
     }

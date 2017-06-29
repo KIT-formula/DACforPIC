@@ -1424,7 +1424,8 @@ flag = 0;
 void interrupt InterTimer(void){
 if(TMR2IF == 1){
 if(flag == 1){
-Count = Count + 16.0;
+Count = Count + 1.0;
+PORTB = 0b00000001;
 if(Count>2000) Count = 2000;
 }
 }
