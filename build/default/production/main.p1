@@ -1042,189 +1042,162 @@ Version 3.2 HI-TECH Software Intermediate Code
 ]
 [; ;main.c: 31: unsigned int send_data = 0;
 "32
-[v _ref `f ~T0 @X0 1 e ]
-[i _ref
--> -> 0 `i `f
-]
-[v _byte `f ~T0 @X0 1 e ]
-[i _byte
--> -> 0 `i `f
-]
-[v _width `f ~T0 @X0 1 e ]
-[i _width
--> -> 0 `i `f
-]
-[v _Count `f ~T0 @X0 1 e ]
-[i _Count
--> -> 0 `i `f
-]
-[; ;main.c: 32: float ref = 0,byte = 0,width = 0,Count = 0;
-"33
 [v _flag `i ~T0 @X0 1 e ]
 [i _flag
 -> 0 `i
 ]
-[v _count2 `i ~T0 @X0 1 e ]
-[i _count2
+[v _Count `i ~T0 @X0 1 e ]
+[i _Count
 -> 0 `i
 ]
-[; ;main.c: 33: int flag = 0,count2 = 0;
-"35
+[; ;main.c: 32: int flag = 0,Count = 0;
+"34
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 35: void main(void){
+[; ;main.c: 34: void main(void){
 [e :U _main ]
 [f ]
-[; ;main.c: 37: OSCCON = 0b00000000;
-"37
+[; ;main.c: 36: OSCCON = 0b00000000;
+"36
 [e = _OSCCON -> -> 0 `i `uc ]
-[; ;main.c: 40: PORTA = 0x00;
-"40
+[; ;main.c: 39: PORTA = 0x00;
+"39
 [e = _PORTA -> -> 0 `i `uc ]
-[; ;main.c: 41: PORTB = 0x00;
-"41
+[; ;main.c: 40: PORTB = 0x00;
+"40
 [e = _PORTB -> -> 0 `i `uc ]
-[; ;main.c: 42: TRISA = 0xFF;
-"42
+[; ;main.c: 41: TRISA = 0xFF;
+"41
 [e = _TRISA -> -> 255 `i `uc ]
-[; ;main.c: 43: TRISB = 0b00000000;
-"43
+[; ;main.c: 42: TRISB = 0b00000000;
+"42
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 44: ANSEL = 0x00;
-"44
+[; ;main.c: 43: ANSEL = 0x00;
+"43
 [e = _ANSEL -> -> 0 `i `uc ]
-[; ;main.c: 47: SSPSTAT = 0b11000000;
-"47
+[; ;main.c: 46: SSPSTAT = 0b11000000;
+"46
 [e = _SSPSTAT -> -> 192 `i `uc ]
-[; ;main.c: 48: SSPCON = 0b00100001;
-"48
+[; ;main.c: 47: SSPCON = 0b00100001;
+"47
 [e = _SSPCON -> -> 33 `i `uc ]
-[; ;main.c: 49: PORTB = 0b00100000;
-"49
+[; ;main.c: 48: PORTB = 0b00100000;
+"48
 [e = _PORTB -> -> 32 `i `uc ]
-[; ;main.c: 52: PEIE = 1;
-"52
+[; ;main.c: 51: PEIE = 1;
+"51
 [e = _PEIE -> -> 1 `i `b ]
-[; ;main.c: 53: GIE = 1;
-"53
+[; ;main.c: 52: GIE = 1;
+"52
 [e = _GIE -> -> 1 `i `b ]
-[; ;main.c: 56: TMR2 = 0;
-"56
+[; ;main.c: 55: TMR2 = 0;
+"55
 [e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 57: TMR2IF = 0;
-"57
+[; ;main.c: 56: TMR2IF = 0;
+"56
 [e = _TMR2IF -> -> 0 `i `b ]
-[; ;main.c: 58: TMR2IE = 1;
-"58
+[; ;main.c: 57: TMR2IE = 1;
+"57
 [e = _TMR2IE -> -> 1 `i `b ]
-[; ;main.c: 59: T2CON = 0b00000000;
-"59
+[; ;main.c: 58: T2CON = 0b00000000;
+"58
 [e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 60: PR2 = 9;
-"60
+[; ;main.c: 59: PR2 = 9;
+"59
 [e = _PR2 -> -> 9 `i `uc ]
-[; ;main.c: 62: ref = 2000.0 / 4096.0;
-"62
-[e = _ref -> / .2000.0 .4096.0 `f ]
-[; ;main.c: 64: while(1) {
-"64
+[; ;main.c: 61: while(1) {
+"61
 [e :U 91 ]
 {
-[; ;main.c: 65: if(PORTAbits.RA0 == 1){
-"65
+[; ;main.c: 62: if(PORTAbits.RA0 == 1){
+"62
 [e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 93  ]
 {
-[; ;main.c: 66: T2CON = 0b00100100;
-"66
+[; ;main.c: 63: T2CON = 0b00100100;
+"63
 [e = _T2CON -> -> 36 `i `uc ]
-[; ;main.c: 67: while(PORTAbits.RA0);
-"67
+[; ;main.c: 64: while(PORTAbits.RA0);
+"64
 [e $U 94  ]
 [e :U 95 ]
 [e :U 94 ]
 [e $ != -> . . _PORTAbits 0 0 `i -> -> -> 0 `i `Vuc `i 95  ]
 [e :U 96 ]
-[; ;main.c: 68: T2CON = 0b00000001;
-"68
+[; ;main.c: 65: T2CON = 0b00000001;
+"65
 [e = _T2CON -> -> 1 `i `uc ]
-[; ;main.c: 72: PORTB = 0b00001000;
-"72
+[; ;main.c: 66: PORTB = 0b00001000;
+"66
 [e = _PORTB -> -> 8 `i `uc ]
-[; ;main.c: 73: SSPBUF = count2 >> 8 | 0x30;
-"73
-[e = _SSPBUF -> | >> _count2 -> 8 `i -> 48 `i `uc ]
-[; ;main.c: 74: while(!SSPSTATbits.BF);
-"74
+[; ;main.c: 67: SSPBUF = Count >> 8 | 0x30;
+"67
+[e = _SSPBUF -> | >> _Count -> 8 `i -> 48 `i `uc ]
+[; ;main.c: 68: while(!SSPSTATbits.BF);
+"68
 [e $U 97  ]
 [e :U 98 ]
 [e :U 97 ]
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 98  ]
 [e :U 99 ]
-[; ;main.c: 75: SSPBUF = count2;
-"75
-[e = _SSPBUF -> _count2 `uc ]
-[; ;main.c: 76: while(!SSPSTATbits.BF);
-"76
+[; ;main.c: 69: SSPBUF = Count;
+"69
+[e = _SSPBUF -> _Count `uc ]
+[; ;main.c: 70: while(!SSPSTATbits.BF);
+"70
 [e $U 100  ]
 [e :U 101 ]
 [e :U 100 ]
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> -> -> 0 `i `Vuc `i 101  ]
 [e :U 102 ]
-[; ;main.c: 77: PORTB = 0b00100000;
-"77
+[; ;main.c: 71: PORTB = 0b00100000;
+"71
 [e = _PORTB -> -> 32 `i `uc ]
-[; ;main.c: 78: _delay((unsigned long)((5)*(20000000/4000000.0)));
-"78
+[; ;main.c: 72: _delay((unsigned long)((5)*(20000000/4000000.0)));
+"72
 [e ( __delay (1 -> * -> -> 5 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 79: PORTB = 0b00101000;
-"79
+[; ;main.c: 73: PORTB = 0b00101000;
+"73
 [e = _PORTB -> -> 40 `i `uc ]
-[; ;main.c: 80: count2 = 0;
-"80
-[e = _count2 -> 0 `i ]
-"81
+[; ;main.c: 74: Count = 0;
+"74
+[e = _Count -> 0 `i ]
+"75
 }
 [e :U 93 ]
-"82
+"76
 }
 [e :U 90 ]
-"64
+"61
 [e $U 91  ]
 [e :U 92 ]
-[; ;main.c: 81: }
-[; ;main.c: 82: }
-[; ;main.c: 83: }
-"83
+[; ;main.c: 75: }
+[; ;main.c: 76: }
+[; ;main.c: 77: }
+"77
 [e :UE 89 ]
 }
-[v F1055 `(v ~T0 @X0 1 tf ]
-"85
-[v _InterTimer `IF1055 ~T0 @X0 1 e ]
+[v F1051 `(v ~T0 @X0 1 tf ]
+"79
+[v _InterTimer `IF1051 ~T0 @X0 1 e ]
 {
-[; ;main.c: 85: void interrupt InterTimer(void){
+[; ;main.c: 79: void interrupt InterTimer(void){
 [e :U _InterTimer ]
 [f ]
-[; ;main.c: 86: if(TMR2IF == 1){
-"86
+[; ;main.c: 80: if(TMR2IF == 1){
+"80
 [e $ ! == -> _TMR2IF `i -> 1 `i 104  ]
 {
-[; ;main.c: 87: PORTB = 0b00000001;
-"87
-[e = _PORTB -> -> 1 `i `uc ]
-[; ;main.c: 88: count2 += 21;
-"88
-[e =+ _count2 -> 21 `i ]
-[; ;main.c: 89: PORTB = 0b00000000;
-"89
-[e = _PORTB -> -> 0 `i `uc ]
-"90
+[; ;main.c: 81: Count += 21;
+"81
+[e =+ _Count -> 21 `i ]
+"82
 }
 [e :U 104 ]
-[; ;main.c: 90: }
-[; ;main.c: 91: TMR2IF = 0;
-"91
+[; ;main.c: 82: }
+[; ;main.c: 83: TMR2IF = 0;
+"83
 [e = _TMR2IF -> -> 0 `i `b ]
-[; ;main.c: 92: }
-"92
+[; ;main.c: 84: }
+"84
 [e :UE 103 ]
 }

@@ -29,8 +29,7 @@
 #define _XTAL_FREQ 20000000
 
 unsigned int send_data = 0;
-float ref = 0,byte = 0,width = 0,Count = 0;
-int flag = 0,count2 = 0;
+int flag = 0,Count = 0;
 
 void main(void){
 
@@ -58,35 +57,28 @@ void main(void){
     TMR2IE = 1;                 // Timer2 interrupt approval
     T2CON  = 0b00000000;        // 488micros intervals
     PR2 = 9;                   // Timer2
-    
-    ref = 2000.0 / 4096.0;
 
     while(1) {
         if(PORTAbits.RA0 == 1){
             T2CON  = 0b00100100;
             while(PORTAbits.RA0);
             T2CON  = 0b00000001;
-            /*byte = Count / ref;
-            send_data = (int)byte;
-            Count = 0;*/
             PORTB = 0b00001000;          // SS LOW
-            SSPBUF = count2 >> 8 | 0x30; // MSB data send start 
+            SSPBUF = Count >> 8 | 0x30; // MSB data send start 
             while(!SSPSTATbits.BF);         // wait send finish
-            SSPBUF = count2;             // LSB data send start
+            SSPBUF = Count;             // LSB data send start
             while(!SSPSTATbits.BF);         // wait send finish
             PORTB = 0b00100000;          // SS HIGH LDAC LOW
             __delay_us(5);
             PORTB = 0b00101000;          // LDAC HIGH
-            count2 = 0;
+            Count = 0;
         }
     }
 }
 
 void interrupt InterTimer(void){
     if(TMR2IF == 1){                 //Timer2 interrupt
-            PORTB = 0b00000001;
-            count2 += 21;
-            PORTB = 0b00000000;
+            Count += 21;
     }
     TMR2IF = 0;
 }

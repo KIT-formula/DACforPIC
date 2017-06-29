@@ -11,9 +11,9 @@
 [v _eecpymem eecpymem `(v  1 e 1 0 ]
 "39
 [v _memcpyee memcpyee `(v  1 e 1 0 ]
-"35 /Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
+"34 /Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
 [v _main main `(v  1 e 1 0 ]
-"85
+"79
 [v _InterTimer InterTimer `II(v  1 e 1 0 ]
 "158 /Applications/microchip/xc8/v1.41/include/pic16f88.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -103,16 +103,14 @@
 "2373
 [v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
 "32 /Users/Y.Mii/MPLABXProjects/Steering Wheel.X/main.c
-[v _ref ref `f  1 e 3 0 ]
-"33
-[v _count2 count2 `i  1 e 2 0 ]
-"35
+[v _Count Count `i  1 e 2 0 ]
+"34
 [v _main main `(v  1 e 1 0 ]
 {
-"83
+"77
 } 0
-"85
+"79
 [v _InterTimer InterTimer `II(v  1 e 1 0 ]
 {
-"92
+"84
 } 0
