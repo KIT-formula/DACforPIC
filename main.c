@@ -29,7 +29,7 @@
 #define _XTAL_FREQ 20000000
 
 unsigned int send_data = 0;
-double ref = 0,byte = 0,width = 0,Count = 0;
+float ref = 0,byte = 0,width = 0,Count = 0;
 int flag = 0,count2 = 0;
 
 void main(void){
@@ -57,44 +57,36 @@ void main(void){
     TMR2IF = 0;                 // Timer2 interrupt flag clear
     TMR2IE = 1;                 // Timer2 interrupt approval
     T2CON  = 0b00000000;        // 488micros intervals
-    PR2 = 4;                   // Timer2
+    PR2 = 9;                   // Timer2
     
     ref = 2000.0 / 4096.0;
 
     while(1) {
         if(PORTAbits.RA0 == 1){
-            T2CON  = 0b00000101;
-            flag = 1;
-            while(PORTAbits.RA0 == 1);
-            T2CON  = 0b00000000;
-            byte = Count / ref;
+            T2CON  = 0b00100100;
+            while(PORTAbits.RA0);
+            T2CON  = 0b00000001;
+            /*byte = Count / ref;
             send_data = (int)byte;
-            Count = 0;
-            if(send_data>4095){
-            send_data = 4095;
-            }
+            Count = 0;*/
             PORTB = 0b00001000;          // SS LOW
-            SSPBUF = send_data >> 8 | 0x30; // MSB data send start 
+            SSPBUF = count2 >> 8 | 0x30; // MSB data send start 
             while(!SSPSTATbits.BF);         // wait send finish
-            SSPBUF = send_data;             // LSB data send start
+            SSPBUF = count2;             // LSB data send start
             while(!SSPSTATbits.BF);         // wait send finish
             PORTB = 0b00100000;          // SS HIGH LDAC LOW
             __delay_us(5);
             PORTB = 0b00101000;          // LDAC HIGH
-        }
-        if(PORTAbits.RA0 == 0){
-            flag = 0;
+            count2 = 0;
         }
     }
 }
 
 void interrupt InterTimer(void){
     if(TMR2IF == 1){                 //Timer2 interrupt
-        if(flag == 1){
-            Count = Count + 1.0;
             PORTB = 0b00000001;
-            if(Count>2000) Count = 2000;
-        }
+            count2 += 21;
+            PORTB = 0b00000000;
     }
     TMR2IF = 0;
 }
