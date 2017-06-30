@@ -1,0 +1,116 @@
+[p LITE_MODE AUTOSTATIC PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F88 ]
+[d frameptr 6 ]
+"62 D:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\float.c
+[v ___ftpack __ftpack `(f  1 e 3 0 ]
+"86 D:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\ftadd.c
+[v ___ftadd __ftadd `(f  1 e 3 0 ]
+"6 D:\Program Files (x86)\Microchip\xc8\v1.42\sources\pic\eeprom.c
+[v _eecpymem eecpymem `(v  1 e 1 0 ]
+"39
+[v _memcpyee memcpyee `(v  1 e 1 0 ]
+"34 D:\ku_sk\ドキュメント\MPLABXProjects\Steering\main.c
+[v _main main `(v  1 e 1 0 ]
+"79
+[v _InterTimer InterTimer `II(v  1 e 1 0 ]
+"164 D:\Program Files (x86)\Microchip\xc8\v1.42\include\pic16f88.h
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+[s S34 . 1 `uc 1 RA0 1 0 :1:0 
+`uc 1 RA1 1 0 :1:1 
+`uc 1 RA2 1 0 :1:2 
+`uc 1 RA3 1 0 :1:3 
+`uc 1 RA4 1 0 :1:4 
+`uc 1 RA5 1 0 :1:5 
+`uc 1 RA6 1 0 :1:6 
+`uc 1 RA7 1 0 :1:7 
+]
+"181
+[u S43 . 1 `S34 1 . 1 0 ]
+[v _PORTAbits PORTAbits `VES43  1 e 1 @5 ]
+"226
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"569
+[v _TMR2 TMR2 `VEuc  1 e 1 @17 ]
+"576
+[v _T2CON T2CON `VEuc  1 e 1 @18 ]
+"647
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"654
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
+"1085
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1147
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1333
+[v _OSCCON OSCCON `VEuc  1 e 1 @143 ]
+"1462
+[v _PR2 PR2 `VEuc  1 e 1 @146 ]
+"1476
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S56 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"1530
+[s S65 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S70 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S76 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S81 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S86 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S91 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S96 . 1 `S56 1 . 1 0 `S65 1 . 1 0 `S70 1 . 1 0 `S76 1 . 1 0 `S81 1 . 1 0 `S86 1 . 1 0 `S91 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES96  1 e 1 @148 ]
+"1733
+[v _ANSEL ANSEL `VEuc  1 e 1 @155 ]
+"2246
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2290
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2424
+[v _TMR2IE TMR2IE `VEb  1 e 0 @1121 ]
+"2426
+[v _TMR2IF TMR2IF `VEb  1 e 0 @97 ]
+"32 D:\ku_sk\ドキュメント\MPLABXProjects\Steering\main.c
+[v _Count Count `i  1 e 2 0 ]
+"34
+[v _main main `(v  1 e 1 0 ]
+{
+"77
+} 0
+"79
+[v _InterTimer InterTimer `II(v  1 e 1 0 ]
+{
+"84
+} 0

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Steering Wheel.X
+PROJECTNAME=Steering
 
 # Active Configuration
 DEFAULTCONF=default
